@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  core:
+    build: core
+    container_name: core
+    env_file: core/.env
+    environment:
+      - JSON_RPC=http://host.docker.internal:8545 # instead of http://localhost:8545
+    ports:
+      - '3001:3001'
+  delegate:
+    build: delegate
+    container_name: delegate
+    env_file: delegate/.env
+    ports:
+      - '3002:3002'

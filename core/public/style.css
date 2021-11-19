@@ -1,0 +1,111 @@
+:root {
+  width: 100%;
+  font-size: 16px;
+  font-family: 'Red Hat Mono', monospace;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  --primary-color: #ddd;
+  --secondary-color: #ccc;
+  --danger-color: #ff5151;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 4rem;
+}
+
+#root {
+  width: 48rem;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+input {
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1;
+  width: 26rem;
+  height: 3rem;
+  padding: 0 1rem;
+  margin-right: 0.5rem;
+}
+
+button {
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  opacity: 0.85;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.header-details {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: end;
+  margin-left: 2rem;
+}
+
+.wallet-info {
+  border-bottom: 1px solid var(--secondary-color);
+  padding-bottom: 2rem;
+}
+
+.label {
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.6rem;
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+}
+
+.checkmark {
+  width: 30px;
+  height: 30px;
+  margin: 15px;
+}
+
+.input-error {
+  margin-left: 0.5rem;
+  color: var(--danger-color);
+}
+
+.error {
+  color: var(--danger-color);
+}
+
+.hidden {
+  display: none;
+}

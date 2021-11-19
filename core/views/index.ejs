@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Core</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Red+Hat+Mono:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1-rc.2/web3.min.js"
+      integrity="sha512-KURAVUCRxZKDemghhiNqTnYzVPUtO3GYznBZRWRBT2GJJ5PmePAxfO7QMGCM8xUJ0QfrUYJDrtRJM4L4NOtfow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script src="script.js" type="module" defer></script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="header">
+        <h1>Core</h1>
+        <div class="header-details">
+          <div>Contract: <span id="core-address"><%=coreAddress%></span></div>
+          <div>Owner: <span id="core-owner"><%=coreOwner%></span></div>
+        </div>
+      </div>
+      <div id="connect-wallet">
+        <button type="button" id="connect-wallet-button">Connect wallet</button>
+      </div>
+      <div id="main" class="hidden">
+        <div class="wallet-info line">
+          <div>Address: <span id="wallet-address"></span></div>
+          <div id="wallet-address-label" class="label hidden"></div>
+        </div>
+        <div id="owner-tools" class="hidden">
+          <h3>Add delegate</h3>
+          <div class="line">
+            <form id="add-delegate">
+              <input
+                id="delegate-address"
+                type="text"
+                placeholder="Delegate address"
+                autocomplete="off"
+              />
+              <button type="submit">Add delegate</button>
+            </form>
+            <div id="add-delegate-error" class="input-error"></div>
+          </div>
+          <div id="add-delegate-success" class="line hidden">
+            <img src="checkmark.png" alt="Checkmark" class="checkmark" />
+            <div>Added <span id="add-delegate-success-address"></span></div>
+          </div>
+        </div>
+        <h3>Verify proof-of-humanity</h3>
+        <div class="line">
+          <form id="verify-proof">
+            <input
+              id="verify-proof-address"
+              type="text"
+              placeholder="Address to verify"
+              autocomplete="off"
+            />
+            <button type="submit">Verify</button>
+          </form>
+        </div>
+        <div id="verify-proof-success" class="line hidden">
+          <img src="checkmark.png" alt="Checkmark" class="checkmark" />
+          <div>Humanity proven <span id="verify-proof-timestamp"></span></div>
+        </div>
+        <p id="verify-proof-error" class="error"></div>
+      </div>
+    </div>
+  </body>
+</html>

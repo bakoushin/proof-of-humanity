@@ -1,0 +1,22 @@
+{
+  "name": "contract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "ganache": "ganache-cli --deterministic",
+    "deploy:ganache": "truffle migrate --network development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Alex Bakoushin <alex@bakoush.in>",
+  "license": "MIT",
+  "devDependencies": {
+    "@openzeppelin/contracts": "4.3.2",
+    "ganache-cli": "6.12.2",
+    "truffle": "5.4.18"
+  }
+}

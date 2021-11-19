@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proof-of-Humanity</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Red+Hat+Mono:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1-rc.2/web3.min.js"
+      integrity="sha512-KURAVUCRxZKDemghhiNqTnYzVPUtO3GYznBZRWRBT2GJJ5PmePAxfO7QMGCM8xUJ0QfrUYJDrtRJM4L4NOtfow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script src="script.js" type="module" defer></script>
+    <script src="https://js.hcaptcha.com/1/api.js" defer></script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="header">
+        <h1>Proof-of-Humanity</h1>
+        <div class="header-details">
+          <div>
+            Delegate: <span id="delegate-address"><%=delegateAddress%></span>
+          </div>
+          <div>Core: <span id="core-address"><%=coreAddress%></span></div>
+        </div>
+      </div>
+      <div id="connect-wallet">
+        <button type="button" id="connect-wallet-button">Connect wallet</button>
+      </div>
+      <div id="main" class="hidden">
+        <div class="wallet-info">
+          Address: <span id="wallet-address"></span>
+        </div>
+        <form id="form">
+          <h4>1. Confirm address ownership</h4>
+          <div id="ownership-confirmation" class="line">
+            <button type="button" id="confirm-ownership-button">
+              Confirm ownership
+            </button>
+            <div class="comment">by signing a random piece of data</div>
+          </div>
+          <div id="ownership-confirmation-success" class="confirmation hidden">
+            <img src="checkmark.png" alt="Checkmark" class="checkmark" />
+            <span>Confirmation signed</span>
+          </div>
+          <h4>2. Confirm humanity</h4>
+          <div id="humanity-confirmation">
+            <div class="h-captcha" data-sitekey="<%=hcaptchaToken%>"></div>
+          </div>
+          <h4>3. Submit</h4>
+          <div id="submission" class="line">
+            <button type="submit">Sumbit evidence</button>
+            <div id="submission-error" class="error-message"></div>
+          </div>
+          <div id="submission-success" class="confirmation hidden">
+            <img src="checkmark.png" alt="Checkmark" class="checkmark" />
+            <span>Evidence submitted <span id="submission-time"></span></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
