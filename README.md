@@ -11,9 +11,9 @@ There could be multiple ways to verify humanity, hence the concept of `Delegates
 ### Concept schema:
 
 ```
-<Delegate> submit proof-> [    ]
-                          [Core]
-                          [    ] <-check proof <Anybody>
+<Delegate> ---submit proof---> [      ]
+                               [ Core ]
+                               [      ] <---check proof--- <Anybody>
 ```
 
 ### Video
