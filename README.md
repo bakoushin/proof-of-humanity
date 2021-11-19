@@ -16,6 +16,10 @@ There could be multiple ways to verify humanity, hence the concept of `Delegates
                           [    ] <-check proof <Anybody>
 ```
 
+### Video
+
+[<img src="https://img.youtube.com/vi/orJCAvCmWvw/maxresdefault.jpg" width="50%">](https://youtu.be/orJCAvCmWvw)
+
 ## Implementation
 
 This repository provides an example of Proof-of-Humanity with a delegate using [hCaptcha](https://www.hcaptcha.com/) verification model.
