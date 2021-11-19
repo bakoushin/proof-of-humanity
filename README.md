@@ -2,11 +2,11 @@
 
 ## Concept
 
-Proof-of-Humanity provides a way to store and verify that certain address is a human rather than a bot.
+Proof-of-Humanity provides a way to store and verify that a certain address is a human rather than a bot.
 
 The evidence could be verified on-chain by smart contract and off-chain: either by calling core API or by calling network RPC.
 
-There could be multiple ways to verify humanity, hence the concept of `Delegates`. Delegates are trusted by the core owner and implement a specific way of humanity validation. No matter what method each delegate uses, finally all proofs are stored within core contract.
+There could be multiple ways to verify humanity, hence the concept of `Delegates`. Delegates are trusted by the core owner and implement a specific way of humanity validation. No matter what method each delegate uses, finally, all proofs are stored within the core contract.
 
 ### Concept schema:
 
@@ -36,7 +36,7 @@ Evidence is stored as follows:
 65 bytes: evidence data proof (ECDSA_SIG(R, delegate))
 ```
 
-Evidence data for signing by delegate is constructed as following bytes concatenation:
+Evidence data for signing by the delegate is constructed as following bytes concatenation:
 
 ```
 R | address | timestamp | ECDSA_SIG(R, address)
@@ -48,7 +48,7 @@ R | address | timestamp | ECDSA_SIG(R, address)
 
 `Core` implements basic UI for:
 
-- add trusted delegate
+- add a trusted delegate
 - check proof-of-humanity for an address
 
 Access: http://localhost:3001
@@ -107,7 +107,7 @@ Content-Type: application/json
 }
 ```
 
-## Quick start
+## Quickstart
 
 Start local development network. Run `ganache-cli` in deterministic mode, so it matches addresses provided as examples in `.env`.
 
@@ -133,7 +133,7 @@ Start `Core` and `Delegate` containers via Docker Compose from the root of the r
 docker-compose up
 ```
 
-Alternatively you can strart each of them separately using NPM:
+Alternatively, you can start each of them separately using NPM:
 
 ```bash
 # Core
@@ -167,7 +167,7 @@ Private key:
 0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d
 ```
 
-This is the first address avalable when `ganache-cli` is started in deterministic mode. This address is the default owner of core contract. It should be used to add the delegate.
+This is the first address available when `ganache-cli` is started in deterministic mode. This address is the default owner of the core contract. It should be used to add the delegate.
 
 ## Author
 
