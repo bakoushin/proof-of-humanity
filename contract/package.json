@@ -15,8 +15,8 @@
   "author": "Alex Bakoushin <alex@bakoush.in>",
   "license": "MIT",
   "devDependencies": {
-    "@openzeppelin/contracts": "4.3.2",
+    "@openzeppelin/contracts": "4.4.2",
     "ganache-cli": "6.12.2",
-    "truffle": "5.4.18"
+    "truffle": "5.4.32"
   }
 }
