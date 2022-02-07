@@ -54,10 +54,11 @@ contract CoreEvidence is Ownable {
     address agent,
     bytes memory timestamp,
     address delegate,
-    bytes memory evidence
+    bytes calldata evidence
   ) public {
     require(isDelegate[delegate], 'Submitted delegate is not registered in core contract');
     require(agent == msg.sender, 'Agent must sumbit evidence itself');
+    require(validateEvidence(agent, timestamp, delegate, evidence), 'Evidence must be valid');
     proofOfHumanity[agent] = ProofOfHumanity(agent, timestamp, delegate, evidence);
     emit EvidenceSubmitted(agent);
   }

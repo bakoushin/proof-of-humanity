@@ -65,6 +65,18 @@ contract('CoreEvidence / Evidence', function([ owner ]) {
     );
   });  
 
+  it('prevents submitting a invalid evidence', async () => {
+    const invalidEvidence = web3.utils.bytesToHex([
+      ...web3.utils.hexToBytes(web3.utils.randomHex(32)),
+      ...web3.utils.hexToBytes(agentSignature),
+      ...web3.utils.hexToBytes(delegateSignature)
+    ]);
+    await expectRevert(
+      coreEvidence.submitEvidence(agent.address, timestamp, delegate.address, invalidEvidence, { from: agent.address }),
+      "Evidence must be valid",
+    );
+  });  
+
   it('can validate an evidence', async () => {
     const result = await coreEvidence.validateEvidence.call(agent.address, timestamp, delegate.address, evidence);
     expect(result).to.be.true;
