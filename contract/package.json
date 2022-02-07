@@ -9,13 +9,15 @@
   "scripts": {
     "ganache": "ganache-cli --deterministic",
     "deploy:ganache": "truffle migrate --network development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "truffle test"
   },
   "keywords": [],
   "author": "Alex Bakoushin <alex@bakoush.in>",
   "license": "MIT",
   "devDependencies": {
     "@openzeppelin/contracts": "4.4.2",
+    "@openzeppelin/test-helpers": "0.5.15",
+    "chai": "4.3.6",
     "ganache-cli": "6.12.2",
     "truffle": "5.4.32"
   }
