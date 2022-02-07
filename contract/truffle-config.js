@@ -18,12 +18,9 @@
  *
  */
 
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
-// const infuraKey = "fj4jll3k.....";
-//
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
-
+ require('dotenv').config();
+ const HDWalletProvider = require('@truffle/hdwallet-provider');
+ 
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -46,6 +43,14 @@ module.exports = {
       host: '127.0.0.1',
       port: 8545,
       network_id: '*'
+    },
+    rinkeby: {
+      provider: () =>
+        new HDWalletProvider({
+          mnemonic: process.env.ACCOUNT_MNEMONIC,
+          providerOrUrl: process.env.INFURA_URL
+        }),
+      network_id: 4
     }
     // Another network with more advanced options...
     // advanced: {

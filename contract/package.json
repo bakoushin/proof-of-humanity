@@ -9,6 +9,7 @@
   "scripts": {
     "ganache": "ganache-cli --deterministic",
     "deploy:ganache": "truffle migrate --network development",
+    "deploy:rinkeby": "truffle migrate --network rinkeby",
     "test": "truffle test"
   },
   "keywords": [],
@@ -17,7 +18,9 @@
   "devDependencies": {
     "@openzeppelin/contracts": "4.4.2",
     "@openzeppelin/test-helpers": "0.5.15",
+    "@truffle/hdwallet-provider": "2.0.3",
     "chai": "4.3.6",
+    "dotenv": "16.0.0",
     "ganache-cli": "6.12.2",
     "truffle": "5.4.32"
   }
