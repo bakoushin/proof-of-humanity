@@ -57,6 +57,7 @@ contract CoreEvidence is Ownable {
     bytes memory evidence
   ) public {
     require(isDelegate[delegate], 'Submitted delegate is not registered in core contract');
+    require(agent == msg.sender, 'Agent must sumbit evidence itself');
     proofOfHumanity[agent] = ProofOfHumanity(agent, timestamp, delegate, evidence);
     emit EvidenceSubmitted(agent);
   }
