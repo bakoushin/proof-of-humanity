@@ -48,7 +48,7 @@ R | address | timestamp | ECDSA_SIG(R, address)
 
 ### Core
 
-Live demo: https://proof-of-humanity-core-ui.glitch.me/
+Live demo (Rinkeby testnet): https://proof-of-humanity-core-ui.glitch.me/
 
 #### UI
 
@@ -80,7 +80,7 @@ GET /api/v1/verify/{address}
 
 ### Delegate
 
-Live demo: https://proof-of-humanity-delegate.glitch.me/
+Live demo (Rinkeby testnet): https://proof-of-humanity-delegate.glitch.me/
 
 #### UI
 
