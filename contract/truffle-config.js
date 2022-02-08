@@ -48,7 +48,7 @@ module.exports = {
       provider: () =>
         new HDWalletProvider({
           mnemonic: process.env.ACCOUNT_MNEMONIC,
-          providerOrUrl: process.env.INFURA_URL
+          providerOrUrl: process.env.PROVIDER_URL
         }),
       network_id: 4
     }
