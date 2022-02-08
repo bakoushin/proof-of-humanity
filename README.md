@@ -48,6 +48,8 @@ R | address | timestamp | ECDSA_SIG(R, address)
 
 ### Core
 
+Live demo: https://proof-of-humanity-core-ui.glitch.me/
+
 #### UI
 
 `Core` implements basic UI for:
@@ -55,7 +57,7 @@ R | address | timestamp | ECDSA_SIG(R, address)
 - add a trusted delegate
 - check proof-of-humanity for an address
 
-Access: http://localhost:3001
+Local access: http://localhost:3001
 
 ### API
 
@@ -78,11 +80,13 @@ GET /api/v1/verify/{address}
 
 ### Delegate
 
+Live demo: https://proof-of-humanity-delegate.glitch.me/
+
 #### UI
 
 `Delegate` implements basic UI for submitting proof-of-humanity using [hCaptcha](https://www.hcaptcha.com/).
 
-Access: http://localhost:3002
+Local access: http://localhost:3002
 
 ### API
 
