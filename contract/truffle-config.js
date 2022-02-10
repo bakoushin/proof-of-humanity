@@ -48,9 +48,17 @@ module.exports = {
       provider: () =>
         new HDWalletProvider({
           mnemonic: process.env.ACCOUNT_MNEMONIC,
-          providerOrUrl: process.env.PROVIDER_URL
+          providerOrUrl: process.env.RINKEBY_URL
         }),
       network_id: 4
+    },
+    mumbai: {
+      provider: () =>
+        new HDWalletProvider({
+          mnemonic: process.env.ACCOUNT_MNEMONIC,
+          providerOrUrl: process.env.MUMBAI_URL
+        }),
+      network_id: 80001
     }
     // Another network with more advanced options...
     // advanced: {

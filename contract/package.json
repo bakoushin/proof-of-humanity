@@ -10,6 +10,7 @@
     "ganache": "ganache-cli --deterministic",
     "deploy:ganache": "truffle migrate --network development",
     "deploy:rinkeby": "truffle migrate --network rinkeby",
+    "deploy:mumbai": "truffle migrate --network mumbai",
     "test": "truffle test"
   },
   "keywords": [],
